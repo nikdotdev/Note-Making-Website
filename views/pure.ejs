@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tasks</title>
+</head>
+
+<body class="bg-gradient-to-b from-zinc-900 to-black min-h-screen text-zinc-200">
+
+  <div class="max-w-5xl mx-auto px-6 py-10">
+
+    <h1 class="text-3xl font-semibold tracking-tight text-white mb-8">Create New Task</h1>
+
+    <div class="bg-zinc-800/40 border border-zinc-700/50 backdrop-blur-lg shadow-xl rounded-2xl p-8 mb-12">
+      <form action="/create" method="post" class="space-y-5">
+
+        <div class="flex flex-col gap-2">
+          <label for="title" class="text-sm font-medium text-zinc-300">Task Title</label>
+          <input 
+            type="text" 
+            name="title"
+            class="px-3 py-2 bg-zinc-900/60 border border-zinc-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter task title"
+            required
+          >
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="description" class="text-sm font-medium text-zinc-300">Description</label>
+          <textarea 
+            name="description" 
+            id="describe" 
+            class="px-3 py-2 bg-zinc-900/60 border border-zinc-700 rounded-lg text-white h-40 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Describe your task..."
+          ></textarea>
+        </div>
+
+        <button 
+          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition rounded-lg text-white font-medium border border-blue-500/40 shadow">
+          Create Task
+        </button>
+
+      </form>
+    </div>
+
+    <h2 class="text-2xl font-semibold tracking-tight text-white mb-6">Your Tasks</h2>
+
+    <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+
+      <% if (files.length > 0) { %>
+        <% files.forEach(function(val) { %>
+
+          <div class="bg-zinc-800/40 border border-zinc-700/50 backdrop-blur-lg shadow-md rounded-xl p-6 hover:border-blue-500 transition">
+
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-sm text-zinc-400">Task File</span>
+              <a href="/edit/<%= val %>" class="text-red-400 hover:text-red-300 text-sm">Edit</a>
+            </div>
+
+            <h1 class="text-xl font-medium text-white mb-2 break-words">
+              <%= val %>
+            </h1>
+
+            <a 
+              href="/files/<%= val %>" 
+              class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              → Read File
+            </a>
+
+          </div>
+
+        <% }) %>
+      <% } else { %>
+
+        <div class="text-zinc-400 text-lg">No tasks yet!</div>
+
+      <% } %>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

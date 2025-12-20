@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Edit File</title>
+</head>
+
+<body class="bg-gradient-to-b from-zinc-900 to-black min-h-screen text-zinc-200">
+
+  <div class="max-w-3xl mx-auto px-6 py-12">
+
+    <a href="/" 
+       class="text-blue-400 hover:text-blue-300 transition tracking-tight text-sm inline-flex items-center mb-6">
+      ← Back to Home
+    </a>
+
+    <h1 class="text-3xl font-semibold tracking-tight text-white mb-8">Edit Filename</h1>
+
+    <div class="bg-zinc-800/40 border border-zinc-700/50 backdrop-blur-xl rounded-2xl p-8 shadow-xl">
+
+      <form action="/edit" method="post" class="space-y-6">
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm text-zinc-300">Previous Title</label>
+          <input 
+            type="text" 
+            name="prev"
+            value="<%= filename %>"
+            class="px-3 py-2 bg-zinc-900/60 rounded-lg border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            readonly
+          >
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm text-zinc-300">New Title</label>
+          <input 
+            type="text" 
+            name="new"
+            placeholder="Enter new filename"
+            class="px-3 py-2 bg-zinc-900/60 rounded-lg border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          >
+        </div>
+
+        <button 
+          class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 transition rounded-lg text-black font-medium border border-yellow-400/40 shadow">
+          Update Filename
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
