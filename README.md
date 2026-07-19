@@ -240,7 +240,6 @@ There is no additional build pipeline or container configuration in the reposito
 - Node.js is used directly to run the application
 - Express handles routing and templating
 - Tailwind CSS is loaded through a CDN script in the templates
-- No Dockerfile, Docker Compose file, or environment example file is present
 
 ## Performance Features
 
@@ -248,7 +247,6 @@ This project is intentionally minimal and does not currently implement advanced 
 
 - Static assets are served directly by Express
 - Notes are read and written from disk as needed
-- No caching layer, Redis, pagination, or lazy loading is currently present
 
 ## Security Features
 
@@ -256,13 +254,11 @@ The current implementation is best suited for local development and small person
 
 - Basic form parsing is enabled
 - File names are derived from input and normalized by removing spaces
-- No authentication, rate limiting, CSRF protection, or advanced input validation is currently implemented
 
 ## Future Improvements
 
 Potential next steps for the project include:
 
-- Add delete functionality for notes
 - Allow editing the content of an existing note, not just the filename
 - Introduce a real database such as MongoDB or SQLite
 - Add search and tagging features
