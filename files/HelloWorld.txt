@@ -1,0 +1,1 @@
+I started my first program with the help of print function in python and in duble inverted i wrote hello world!
