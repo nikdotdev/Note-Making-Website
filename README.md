@@ -61,14 +61,6 @@ Handon is a lightweight note-taking web application built with Node.js, Express,
 - None currently implemented
 - Notes are stored as plain text files in the local files directory
 
-### Authentication
-
-- Not implemented
-
-### State Management
-
-- None
-
 ### Styling
 
 - Tailwind CSS
@@ -82,11 +74,6 @@ Handon is a lightweight note-taking web application built with Node.js, Express,
 - express
 - ejs
 - nodemon
-
-### Deployment
-
-- Local development server only
-- No Docker or cloud deployment configuration is currently present
 
 ### Dev Tools
 
@@ -147,7 +134,7 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone <repository-url>
-cd Handon
+cd note-making-website
 npm install
 ```
 
@@ -298,9 +285,9 @@ If you are unsure where to start, a good first contribution would be adding note
 
 Built by Nikhil Thakur.
 
-- GitHub: Update this section manually
-- LinkedIn: Update this section manually
-- Portfolio: Update this section manually
+- GitHub:  https://github.com/nikdotdev
+- LinkedIn: https://www.linkedin.com/in/nikhil-thakur-39574b311/
+- Portfolio: https://www.nikhilthakur.tech/
 
 ## Acknowledgements
 
